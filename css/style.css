@@ -1,0 +1,599 @@
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        sub,
+        sup,
+        tt,
+        var,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        input,
+        select,
+        textarea,
+        button,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            background-color: #F4F7F9;
+            font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        img {
+            border: 0;
+        }
+        
+         :focus {
+            outline: 0;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .container {
+            width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            color: #fff;
+            background-color: #316aff;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            font-size: 17px;
+            transition: 200ms all;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn.color-green {
+            background-color: #36855b;
+        }
+        
+        header.header {
+            height: 60px;
+            background-color: #141618;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .header .container {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        
+        .header .container .logo {
+            margin-right: 40px;
+        }
+        
+        .header .container .menu ul li a {
+            font-size: 14px;
+            color: rgba(255, 255, 255, .6);
+            display: flex;
+            align-items: center;
+            height: 60px;
+            line-height: 60px;
+        }
+        
+        .header .container .menu ul li a:hover {
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .header .container .menu ul li a i {
+            margin-right: 10px;
+        }
+        
+        .header .search {
+            display: flex;
+            overflow: hidden;
+            margin-left: auto;
+        }
+        
+        .header .search input {
+            height: 34px;
+            width: 200px;
+            background-color: #21252d;
+            padding: 0 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            padding-left: 5px;
+        }
+        
+        .header .search input::placeholder {
+            color: rgba(255, 255, 255, .6);
+            transition: 200ms opacity;
+        }
+        
+        .header .search input:focus::placeholder {
+            opacity: 0;
+        }
+        
+        .header .search button {
+            width: 32px;
+            height: 34px;
+            background-color: #21252d;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .header .search button:hover {
+            background-color: #316aff;
+        }
+        
+        .header .login-buttons ul {
+            display: flex;
+        }
+        
+        .header .login-buttons ul li {
+            margin-left: 16px;
+        }
+        
+        .header .login-buttons ul li a {
+            display: block;
+            height: 34px;
+            line-height: 34px;
+            color: rgba(255, 255, 255, .8);
+        }
+        
+        .header .login-buttons ul li a:hover {
+            color: #fff;
+        }
+        
+        .header .login-buttons ul li.join-now-btn {
+            background-color: #36855b;
+            border-radius: 5px;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        /* BANNER SECTION ALANI */
+        
+        .banner {
+            /* min-height: calc(100vh - 60px); */
+            min-height: 50vh;
+            background: linear-gradient(170deg, #212A39, #181E28);
+        }
+        
+        .banner .container {
+            min-height: 50vh;
+            display: flex;
+            padding: 60px 0;
+            align-items: center;
+        }
+        
+        .banner .container .banner-box {
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .banner .container .banner-box.banner-image {
+            transition: 20ms transform;
+        }
+        
+        .banner .container .banner-box.banner-image:hover {
+            transform: scale(1.1);
+        }
+        
+        .banner .container .banner-box img {
+            height: 350px;
+            margin-left: 200px;
+        }
+        
+        .banner .container .banner-box.banner-image a:hover {
+            transform: scale(1.05);
+        }
+        
+        .banner .container .banner-box h1 {
+            font-size: 48px;
+            color: #fff;
+            line-height: 56px;
+            font-weight: 500;
+        }
+        
+        .banner .container .banner-box h3 {
+            font-size: 24px;
+            color: #B0B6BE;
+            margin-top: 10px;
+        }
+        
+        .banner .container .banner-box .button {
+            margin-top: 65px;
+            padding: 5 20px;
+        }
+        /*
+    SECTION 1
+*/
+        
+        .section1 {
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+        }
+        
+        .section1 .lang {
+            display: flex;
+            width: 392px;
+            min-width: 392px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .section1 .lang a {
+            width: 184px;
+            height: 184px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px -5px rgb(0, 0, 0, .1);
+            transition: 200ms all;
+        }
+        
+        .section1 .lang a:hover {
+            transform: scale(1.05);
+        }
+        
+        .section1 .lang a img {
+            margin-bottom: 15px;
+            height: 45px;
+        }
+        
+        .section1 .lang a title {
+            font-size: 18px;
+            font-weight: 400;
+            color: #111;
+        }
+        
+        .section1 .inner {
+            padding-left: 160px;
+        }
+        
+        .section1 .inner h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #111;
+        }
+        
+        .section1 .inner p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+        /*
+    SECTION 2
+*/
+        
+        .section2 {
+            background-color: #fff;
+            padding: 64px 96px;
+            box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        
+        .section2 .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #f4f5f9;
+            /* text-align: center;
+            line-height: 56px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .section2 .icon {
+            color: #D7DBE7;
+            font-size: 24px;
+        }
+        
+        .section2 p {
+            font-family: georgia, times, serif;
+            font-size: 22px;
+            margin-bottom: 10px;
+            max-width: 60%;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+        }
+        
+        .section2 .user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: rgba(0, 0, 0, .8);
+        }
+        
+        .section2 .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            margin-right: 10px;
+        }
+        /*
+    SECTION 3
+*/
+        
+        .section3 {
+            display: flex;
+            padding: 0 30px;
+        }
+        
+        .section3>div {
+            width: 50%;
+            min-width: 50%;
+        }
+        
+        .section3 .text h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .section3 .text p {
+            font-size: 18px;
+            line-height: 28px;
+            color: #111;
+        }
+        
+        .section3 .text .btn {
+            margin-top: 50px;
+        }
+        
+        .section3 .image {
+            padding-top: 80px;
+        }
+        
+        .section3 .image img {
+            width: 100%;
+            display: block;
+        }
+        /* FOOTER */
+        
+        .footer {
+            background-color: #141618;
+        }
+        
+        .footer .logo {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .footer .container {
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .footer .container .footer-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer .container .footer-nav nav {
+            margin-right: 32px;
+            align-self: flex-start;
+        }
+        
+        .footer .container .footer-nav nav h5 {
+            letter-spacing: 1.2px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .footer .container .footer-nav nav ul li {
+            margin-bottom: 5px;
+        }
+        
+        .footer .container .footer-nav nav ul li a {
+            display: block;
+            line-height: 150%;
+            font-size: 16px;
+            color: rgba(255, 255, 255, .6);
+            transition: 200ms all;
+        }
+        
+        .footer .container .footer-nav nav ul li a:hover {
+            color: #fff;
+            transform: scale(1.5);
+        }
+        
+        .footer .container .search {
+            margin-left: auto;
+        }
+        
+        .footer .container .search h4 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 18px;
+        }
+        
+        .footer .container .search form {
+            display: flex;
+        }
+        
+        .footer .container .search input {
+            height: 48px;
+            width: 375px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            padding: 0 15px;
+            background-color: #21252d;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        
+        .footer .container .search button {
+            width: 48px;
+            height: 48px;
+            background-color: #316aff;
+            color: #fff;
+            font-size: 19px;
+            cursor: pointer;
+        }
+        
+        .footer .container .copyright {
+            padding-top: 20px;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, .5);
+            border-top: 1px solid rgba(255, 255, 255, .05);
+        }
+        
+        .footer .container .copyright a {
+            margin-right: 15px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 16px;
+            transition: 200ms all;
+        }
+        
+        .footer .container .copyright .text {
+            margin-left: 10px;
+            color: rgba(255, 255, 255, .5);
+            font-size: 16px;
+        }
+        
+        .footer .container .copyright a:hover,
+        .footer .container .copyright .text:hover {
+            color: #fff;
+        }
